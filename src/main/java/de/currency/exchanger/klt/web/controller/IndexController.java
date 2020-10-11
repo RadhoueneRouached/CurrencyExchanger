@@ -34,7 +34,7 @@ public class IndexController {
     public String index(Model model) {
         model.addAttribute("title", "Karten&Konten");
         model.addAttribute("welcome", "Welcome to CE");
-        model.addAttribute("applicationTitle", "Currency Converter");
+        model.addAttribute("applicationTitle", "Exchange rates API is a free service for current and historical foreign exchange rates");
         return "index";
     }
 

@@ -1,4 +1,6 @@
 spring:
+  favicon:
+    enabled: true
   application:
     name: KLT Converter
   thymeleaf:
