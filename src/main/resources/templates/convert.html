@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">KuK KLT</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.6/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.6/css/bootstrap-theme.min.css}"
+          rel="stylesheet" media="screen"/>
+    <link th:href="@{/libs/css/sticky-footer-navbar.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+
+<div class="container">
+    <div th:replace="includes/header :: top-navigation"></div>
+    <br/>
+    <div class="page-header">
+        <h1>Currency Conversion</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-11">
+            <form action="#" th:object="${converterModel}" method="post"
+                  id="conversionForm" role="form">
+
+                <div class="row">
+
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <input type="number" class="form-control" id="srcAmount" min="1.00" step="0.01"
+                                   name="srcAmount" placeholder="" th:field="*{srcAmount}"/>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <select class="selectpicker show-tick form-control"
+                                    id="baseCurrency" name="baseCurrency" th:field="*{baseCurrency}">
+                                <option th:value="EUR">Euro</option>
+                                <option th:value="USD">United States Dollar - USD</option>
+                                <option th:value="JPY">Japanese Yen - JPY</option>
+                                <option th:value="GBP">Pound sterling - GBP</option>
+                                <option th:value="INR">Indian Rupee - INR</option>
+                                <option th:value="BRL">Brazilian Real - BRL</option>
+                                <option th:value="TRY">Turkish Lira - TRY</option>
+                                <option th:value="RUB">Russian Ruble - RUB</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="col-md-1 text-center">
+                        <div class="form-group">
+                            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <select class="selectpicker show-tick form-control"
+                                        id="targetCurrency" name="targetCurrency" th:field="*{targetCurrency}">
+                                    <option th:value="USD">United States dollar - USD</option>
+                                    <option th:value="EUR">Euro</option>
+                                    <option th:value="JPY">Japanese Yen - JPY</option>
+                                    <option th:value="GBP">Pound sterling - GBP</option>
+                                    <option th:value="INR">Indian Rupee - INR</option>
+                                    <option th:value="BRL">Brazilian Real - BRL</option>
+                                    <option th:value="TRY">Turkish Lira - TRY</option>
+                                    <option th:value="RUB">Russian Ruble - RUB</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="targetAmount" step="0.01"
+                                       name="targetAmount" placeholder="" th:field="*{targetAmount}"/>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-2">&nbsp;</div>
+                    <div class="col-md-3">&nbsp;</div>
+                    <div class="col-md-1 text-center">
+                        <button type="submit" id="convert" name="convert" class="btn btn-primary">Convert
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

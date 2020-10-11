@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="finacc-klt:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/finacc_klt_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="finacc-klt/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="finacc-klt" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
