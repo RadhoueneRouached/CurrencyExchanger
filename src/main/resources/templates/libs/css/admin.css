@@ -39,3 +39,12 @@
 	background-color: #45a1ff;
 	color: #fff;
 }
+
+.div-block-13{
+  position: absolute;
+  top: 0px;
+  right: 7px;
+  margin-top: 50px;
+  white-space: nowrap;
+  display:inline-block;
+}

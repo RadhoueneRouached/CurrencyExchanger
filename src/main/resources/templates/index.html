@@ -2,16 +2,18 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="de">
 <head th:replace="includes/header :: head">
     <meta charset="UTF-8">
-    <title th:text="${title}">KuK KLT</title>
+    <title th:text="${title}">Currency Exchanger - CC</title>
+    <link th:href="@{/libs.css/admin.css}" rel="stylesheet" />
 </head>
 <body>
 
+<div class="div-block-13">
 <div th:replace="includes/header :: top-navigation"></div>
 <h1 th:text="${welcome}"></h1>
 <h2 th:text="${applicationTitle}"></h2>
 
 <div th:replace="includes/footer :: footer"></div>
-
+</div>
 </body>
 </html>
 </body>
